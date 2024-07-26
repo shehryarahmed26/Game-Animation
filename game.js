@@ -12,7 +12,8 @@ window.addEventListener('keyup', resetaction)
 
 
 // ************************* Game Functionality Start *********************************** //
-let movement = 20;
+let ironmanmovement = 20;
+let hulkmovement = 20;
 let move = false
 
 function action (e) {
@@ -47,8 +48,8 @@ function ironmanmove (type) {
             ironman.src = 'Images/ironman-farward.gif';
         }
             move = true
-            movement += 5;
-            ironman.style.left = `${movement}px`
+            ironmanmovement += 5;
+            ironman.style.left = `${ironmanmovement}px`
 
     }
     else if (type === 'backward') {
@@ -56,8 +57,8 @@ function ironmanmove (type) {
             ironman.src = 'Images/ironman-farward.gif';
         }
             move = true;
-            movement -= 5;
-            ironman.style.left = `${movement}px`
+            ironmanmovement -= 5;
+            ironman.style.left = `${ironmanmovement}px`
         
     }
     else if (type === 'power') {
@@ -76,8 +77,8 @@ function hulkmove (type) {
         if (!move) {
             hulk.src = 'Images/hulk-farward.gif';
         }
-        movement += 5;
-        hulk.style.right = `${movement}px`
+        hulkmovement += 5;
+        hulk.style.right = `${hulkmovement}px`
         move = true
     }
     else if (type === 'backward') {
@@ -85,8 +86,8 @@ function hulkmove (type) {
             hulk.src = 'Images/hulk-backward.gif';
         }
         move = true;
-        movement -= 5;
-        hulk.style.right = `${movement}px`
+        hulkmovement -= 5;
+        hulk.style.right = `${hulkmovement}px`
     }
     else if (type === 'power') {
         if (!move) {
