@@ -12,6 +12,16 @@ window.addEventListener('keyup', resetaction)
 
 
 // ************************* Game Functionality Start *********************************** //
+
+let game_intro = document.querySelector('.game-intro')
+let game_main = document.querySelector('.main')
+let start_btn = document.getElementById('start-btn')
+start_btn.addEventListener('click', (e) => {
+e.preventDefault();
+game_intro.style.display = 'none'
+game_main.style.display = 'block'
+})
+
 let ironmanmovement = 20;
 let hulkmovement = 20;
 let move = false
